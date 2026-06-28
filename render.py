@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 render.py — Visio 渲染函数库
-从 aerial_qc.py 实战提炼的原子操作，供 generate.py 调用。
+原子级 COM 操作（形状/连线/裁剪/避障/标签），供 generate.py 调用。
 所有函数接收/返回 COM 对象，不关心 JSON 结构。
 """
 import win32com.client as wc
