@@ -71,7 +71,7 @@ metadata:
 | [generate.py](generate.py) | 引擎入口：读 JSON → 布局 → COM 绘制 → 裁剪 → 输出 |
 | [render.py](render.py) | 渲染函数库（cell 操作、形状母版、连线、裁剪、Visio 生命周期） |
 | [layout.py](layout.py) | 自动布局兜底（缺 `pos` 时按层级算法算坐标） |
-| [examples/aerial_qc.json](examples/aerial_qc.json) | 验证范例（航摄质检流程，含判断分支/汇聚/标签） |
+| [examples/](examples/) | 验证范例：leap_year（判断分支汇聚）、login_check（多判断+分组框） |
 
 ---
 

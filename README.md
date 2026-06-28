@@ -146,7 +146,7 @@ python generate.py <flow.json> [-o 输出.vsdx] [--pad 0.1] [--png]
 | `render.py` | 渲染函数库（COM 操作、避障、裁剪、模具自动探测） |
 | `layout.py` | 自动布局兜底（缺 `pos` 时按层级算坐标） |
 | `SKILL.md` | 完整文档（agent 调用指南，含全部字段/坑清单） |
-| `examples/` | 范例 JSON（aerial_qc 复杂流程 / quality_eval 分组框+上下标） |
+| `examples/` | 范例 JSON（leap_year 判断分支汇聚 / login_check 多判断+分组框） |
 
 ## 常见问题
 
