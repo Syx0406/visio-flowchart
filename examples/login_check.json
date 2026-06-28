@@ -1,0 +1,25 @@
+{
+  "title": "用户登录校验",
+  "canvas_pad": 0.15,
+  "nodes": [
+    {"id": "start", "type": "terminator", "text": "开始", "fill": "70AD47", "text_color": "white", "font_size": 11, "bold": true, "pos": [5.0, 9.5], "size": [1.8, 0.6]},
+    {"id": "input", "type": "data", "text": "输入账号、密码", "fill": "4472C4", "text_color": "white", "font_size": 10, "pos": [5.0, 8.2], "size": [2.6, 0.6]},
+    {"id": "exist", "type": "decision", "text": "账号是否存在?", "fill": "ED7D31", "text_color": "white", "font_size": 10, "pos": [5.0, 6.8], "size": [2.4, 1.0]},
+    {"id": "pwd", "type": "decision", "text": "密码是否正确?", "fill": "ED7D31", "text_color": "white", "font_size": 10, "pos": [5.0, 4.8], "size": [2.4, 1.0]},
+    {"id": "ok", "type": "process", "text": "生成Token写入会话", "fill": "C6E0B4", "font_size": 10, "pos": [5.0, 3.0], "size": [2.8, 0.6]},
+    {"id": "success", "type": "terminator", "text": "登录成功", "fill": "70AD47", "text_color": "white", "font_size": 11, "bold": true, "pos": [5.0, 1.6], "size": [2.0, 0.6]},
+    {"id": "reject", "type": "terminator", "text": "拒绝登录", "fill": "C55A11", "text_color": "white", "font_size": 11, "bold": true, "pos": [8.8, 6.8], "size": [2.0, 0.6]}
+  ],
+  "edges": [
+    {"from": "start", "to": "input"},
+    {"from": "input", "to": "exist"},
+    {"from": "exist", "to": "pwd", "label": "是"},
+    {"from": "exist", "to": "reject", "label": "否"},
+    {"from": "pwd", "to": "ok", "label": "是"},
+    {"from": "pwd", "to": "reject", "label": "否"},
+    {"from": "ok", "to": "success"}
+  ],
+  "groups": [
+    {"pos": [1.2, 5.8, 8.8, 7.8], "label": "身份校验", "color": "8FAADC", "dashed": true}
+  ]
+}
